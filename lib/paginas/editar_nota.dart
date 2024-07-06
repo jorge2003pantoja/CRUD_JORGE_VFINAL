@@ -35,8 +35,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Editar Nota'),
-        backgroundColor: Colors.teal,
+        title: Text('Editar'),
+        backgroundColor: Color.fromARGB(255, 188, 34, 34),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -58,9 +58,9 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   labelText: 'Título de la Nota',
-                  labelStyle: TextStyle(color: Colors.teal),
+                  labelStyle: TextStyle(color: Color.fromARGB(255, 188, 34, 34)),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.teal),
+                    borderSide: BorderSide(color: Color.fromARGB(255, 150, 0, 0)),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -82,9 +82,9 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   labelText: 'Descripción de la Nota',
-                  labelStyle: TextStyle(color: Colors.teal),
+                  labelStyle: TextStyle(color: const Color.fromARGB(255, 150, 0, 0)),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.teal),
+                    borderSide: BorderSide(color: const Color.fromARGB(255, 150, 0, 0)),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -128,7 +128,7 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.teal,
+                        backgroundColor: Color.fromARGB(255, 255, 13, 13),
                         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                         textStyle: TextStyle(fontSize: 18),
                         shape: RoundedRectangleBorder(

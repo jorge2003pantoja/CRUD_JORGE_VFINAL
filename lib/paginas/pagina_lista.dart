@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:crud_flutter_jorge/db/operaciones.dart';
 import 'package:crud_flutter_jorge/paginas/guardar_pagina.dart';
 import 'package:crud_flutter_jorge/modelos/notas.dart';
+import 'package:crud_flutter_jorge/paginas/editar_nota.dart';
 
 class ListPages extends StatelessWidget {
   const ListPages({super.key});
@@ -75,6 +76,18 @@ class _MiListaState extends State<_MiLista>{
       },
       child: ListTile(
         title: Text(notas[i].titulo),
+        trailing: Icon(Icons.edit, color: Colors.black),
+          onTap: () async {
+            bool? result = await Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => EditNoteScreen(nota: notas[i]),
+              ),
+            );
+            if (result == true) {
+              _cargarDatos(); // Actualiza la lista cuando se edita una nota
+            }
+          },
       )
     );
   }
